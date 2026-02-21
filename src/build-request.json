@@ -1,0 +1,101 @@
+{
+  "kind": "build_request",
+  "title": "Fix Featured Products section to display all 18 products",
+  "projectName": "Techvixo",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-34",
+      "text": "Debug and fix the FeaturedProducts component data fetching to ensure all 18 products from the backend featuredProducts map are retrieved and rendered in the Featured Products grid section, replacing the current behavior where only the original 6 products display",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-final"
+        ],
+        "quotes": [
+          "Only the 1st version product only are there in page not showing whole 18 product's"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 18 products from the backend featuredProducts map appear in the Featured Products grid",
+        "The grid displays the original 6 products plus the 12 newly added products (Samsung Galaxy M07, M56, iQOO Z10R, Ant Esports combo, LG AC, LG TV, Godrej refrigerator, ASUS TUF A15, water purifier, Fire TV Stick, Hollyland microphone, ECOVACS robot vacuum)",
+        "Products render with correct images, titles, prices, and affiliate links",
+        "Console logs show successful fetching of 18 products from the backend actor"
+      ]
+    },
+    {
+      "id": "REQ-35",
+      "text": "Verify the useQueries hook's featuredProducts query returns the complete array of 18 products from the backend actor's getFeaturedProducts method without truncation or filtering",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-final"
+        ],
+        "quotes": [
+          "Fix technical issue where product's still aren't showing"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The useQueries hook successfully fetches all 18 products from the backend",
+        "React Query cache contains all 18 product entries",
+        "No data transformation or filtering inadvertently reduces the product count",
+        "Debug logs confirm 18 products received from the backend actor"
+      ]
+    },
+    {
+      "id": "REQ-36",
+      "text": "Ensure the backend getFeaturedProducts method correctly returns all 18 entries from the featuredProducts map including the 12 newly added products",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-final"
+        ],
+        "quotes": [
+          "not showing whole 18 product's"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The getFeaturedProducts method iterates over all 18 entries in the featuredProducts map",
+        "The returned array contains exactly 18 Product objects",
+        "All 12 new products (Samsung Galaxy M07, M56, iQOO Z10R, Ant Esports combo, LG AC, LG TV, Godrej refrigerator, ASUS TUF A15, water purifier, Fire TV Stick, Hollyland microphone, ECOVACS robot vacuum) are included in the response",
+        "No products are excluded or filtered out during the query"
+      ]
+    },
+    {
+      "id": "REQ-37",
+      "text": "Fix any array slicing, limiting, or filtering logic in the FeaturedProducts component that might be preventing all 18 products from rendering in the grid",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-final"
+        ],
+        "quotes": [
+          "Only the 1st version product only are there in page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No .slice(), .take(), or .limit() operations artificially cap the product count at 6",
+        "Search and category filters preserve all 18 products when no filters are active",
+        "The product grid dynamically renders all products without hardcoded limits",
+        "The responsive grid layout accommodates 18+ product cards properly"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "Maintain the single-actor backend architecture with all logic in backend/main.mo",
+    "Preserve all existing product data and affiliate URLs in the backend",
+    "Keep the responsive grid layout and visual styling consistent with the warm tech color palette"
+  ],
+  "nonGoals": [
+    "Adding new products beyond the existing 18",
+    "Changing the product card design or layout structure",
+    "Modifying the Today's Deals section",
+    "Altering search or category filter functionality",
+    "Changing the backend Product type definition"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

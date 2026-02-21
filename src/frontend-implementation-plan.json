@@ -1,0 +1,68 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix Featured Products section to display all 18 products",
+  "requirements": [
+    {
+      "id": "REQ-34",
+      "summary": "Debug and fix the FeaturedProducts component data fetching to ensure all 18 products from the backend featuredProducts map are retrieved and rendered in the Featured Products grid section",
+      "acceptanceCriteria": [
+        "All 18 products from the backend featuredProducts map appear in the Featured Products grid",
+        "The grid displays the original 6 products plus the 12 newly added products (Samsung Galaxy M07, M56, iQOO Z10R, Ant Esports combo, LG AC, LG TV, Godrej refrigerator, ASUS TUF A15, water purifier, Fire TV Stick, Hollyland microphone, ECOVACS robot vacuum)",
+        "Products render with correct images, titles, prices, and affiliate links",
+        "Console logs show successful fetching of 18 products from the backend actor"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FeaturedProducts.tsx",
+          "operation": "modify",
+          "description": "Add enhanced debug logging to trace the complete data flow from the useQueries hook through filtering to rendering. Log the raw data length from React Query, the filtered results length, and inspect any array operations that might be limiting the product count. Verify that no .slice(), .take(), or similar operations are capping the results at 6 products. Ensure the component renders all products returned from the backend without artificial limits."
+        },
+        {
+          "path": "frontend/src/components/DealCard.tsx",
+          "operation": "modify",
+          "description": "Verify the image mapping includes all 18 product images (the file summary indicates it already has 18 featured products mapped). Ensure the component correctly handles all product IDs without fallback issues. Add console warnings if any product images are missing from the mapping to help identify rendering issues."
+        }
+      ]
+    },
+    {
+      "id": "REQ-35",
+      "summary": "Verify the useQueries hook's featuredProducts query returns the complete array of 18 products from the backend actor's getAllFeaturedProducts method without truncation or filtering",
+      "acceptanceCriteria": [
+        "The useQueries hook successfully fetches all 18 products from the backend",
+        "React Query cache contains all 18 product entries",
+        "No data transformation or filtering inadvertently reduces the product count",
+        "Debug logs confirm 18 products received from the backend actor"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add comprehensive debug logging to the featuredProducts query to log the raw response from actor.getAllFeaturedProducts() before any processing. Log the exact length of the returned array and inspect the response structure. Verify that React Query's retry logic and caching are not causing stale data issues. Add error logging to catch any exceptions during data fetching that might result in partial data. Ensure the query returns the complete unfiltered array from the backend."
+        }
+      ]
+    },
+    {
+      "id": "REQ-37",
+      "summary": "Fix any array slicing, limiting, or filtering logic in the FeaturedProducts component that might be preventing all 18 products from rendering in the grid",
+      "acceptanceCriteria": [
+        "No .slice(), .take(), or .limit() operations artificially cap the product count at 6",
+        "Search and category filters preserve all 18 products when no filters are active",
+        "The product grid dynamically renders all products without hardcoded limits",
+        "The responsive grid layout accommodates 18+ product cards properly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FeaturedProducts.tsx",
+          "operation": "modify",
+          "description": "Audit all filtering logic in the component to ensure search query and category filters are applied correctly without inadvertently reducing the product count when no filters are active. Remove any hardcoded array limits or slice operations. Verify the filteredProducts array contains all 18 products when searchQuery is empty and selectedCategory is 'All'. Ensure the grid layout styling supports rendering 18+ product cards with proper responsive behavior. Add debug logs before and after filtering operations to confirm product counts at each stage."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Review the search and category filter state management to ensure filters are initialized correctly and do not inadvertently filter out products on initial load. Verify that the searchQuery and selectedCategory props passed to FeaturedProducts default to values that show all products (empty string and 'All' respectively). Add console logs to track filter state changes and their impact on product visibility."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 19,
+  "summary": "Tech affiliate marketing website selling electronics and gadgets with featured products and a daily deals section",
+  "architectural_notes": [
+    "Affiliate link structure using Amazon affiliate URLs",
+    "Product catalog with 6 initial tech products (laptops, audio devices, keyboard)",
+    "Techvixo brand logo and name in header",
+    "Partnership branding showing 'Techvixo × Amazon'",
+    "Search functionality for product discovery",
+    "Product categorization system",
+    "Techvixo × Amazon branding links to YouTube channel: https://youtube.com/@techvixo_11?si=xg8gQ9jchs209IEM",
+    "Currency display in Indian Rupees (INR)",
+    "Search navigation to product detail pages",
+    "Product review integration from Amazon"
+  ],
+  "known_issues": [
+    "Only 6 original products displaying instead of all 18 products in Featured Products section"
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-design-and-implement-a-homepage-layout-displaying-the-six-featured-tech-products-in-a-grid-with-product-photos-titles-brief-descriptions-prices-and-clickable-affiliate-links-that-open-in-new-tabs",
+      "title": "Design and implement a homepage layout displaying the six featured tech products in a grid with product photos, titles, brief descriptions, prices, and clickable affiliate links that open in new tabs",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-distinct-today-s-deals-section-on-the-homepage-below-the-featured-products-displaying-promotional-items-with-special-styling-to-highlight-limited-time-offers",
+      "title": "Implement a distinct 'Today's Deals' section on the homepage below the featured products, displaying promotional items with special styling to highlight limited-time offers",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-modern-visual-design-theme-to-the-entire-tech-affiliate-website-with-professional-styling-suitable-for-an-e-commerce-tech-showcase-using-warm-tech-focused-colors-oranges-blacks-grays-and-clean-typography-that-avoids-blue-and-purple-color-schemes",
+      "title": "Apply a cohesive, modern visual design theme to the entire tech affiliate website with professional styling suitable for an e-commerce tech showcase, using warm tech-focused colors (oranges, blacks, grays) and clean typography that avoids blue and purple color schemes",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-all-generated-product-images-as-static-assets-from-frontend-public-assets-generated-directory-including-images-for-apple-macbook-pro-sony-wf-1000xm5-earbuds-solakaka-mechanical-keyboard-sony-ult-field-1-speaker-dell-14-laptop-and-apple-airpods-4",
+      "title": "Render all generated product images as static assets from frontend/public/assets/generated directory, including images for Apple MacBook Pro, Sony WF-1000XM5 earbuds, SOLAKAKA mechanical keyboard, Sony ULT Field 1 speaker, Dell 14 laptop, and Apple AirPods 4",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-techvixo-logo-image-to-the-website-header-in-the-layout-component-positioned-before-or-alongside-the-site-title",
+      "title": "Add Techvixo logo image to the website header in the Layout component, positioned before or alongside the site title",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-techvixo-as-the-primary-brand-name-in-the-website-header-replacing-or-complementing-the-current-tech-affiliate-hub-title",
+      "title": "Display 'Techvixo' as the primary brand name in the website header, replacing or complementing the current 'Tech Affiliate Hub' title",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-techvixo-amazon-partnership-branding-text-in-a-visible-location-on-the-site-such-as-below-the-header-or-in-the-hero-section",
+      "title": "Add 'Techvixo × Amazon' partnership branding text in a visible location on the site, such as below the header or in the hero section",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-reorganize-the-today-s-deals-section-from-a-grid-layout-to-a-horizontal-row-layout-that-displays-deals-in-a-single-scrollable-row",
+      "title": "Reorganize the Today's Deals section from a grid layout to a horizontal row layout that displays deals in a single scrollable row",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-generated-techvixo-logo-image-as-a-static-asset-from-the-frontend-public-assets-generated-directory",
+      "title": "Render the generated Techvixo logo image as a static asset from the frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-search-bar-component-to-the-website-header-in-the-layout-component-that-allows-users-to-search-for-products-by-title-or-description",
+      "title": "Add a search bar component to the website header in the Layout component that allows users to search for products by title or description",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-search-functionality-that-filters-both-featured-products-and-today-s-deals-based-on-user-search-input-matching-product-titles-or-descriptions",
+      "title": "Implement search functionality that filters both featured products and today's deals based on user search input matching product titles or descriptions",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-categories-section-to-the-website-that-displays-product-category-filters-e-g-laptops-audio-keyboards-speakers-accessories-allowing-users-to-browse-products-by-category",
+      "title": "Add a categories section to the website that displays product category filters (e.g., Laptops, Audio, Keyboards, Speakers, Accessories) allowing users to browse products by category",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-category-filtering-logic-that-filters-products-when-a-category-is-selected-showing-only-products-matching-that-category",
+      "title": "Implement category filtering logic that filters products when a category is selected, showing only products matching that category",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-search-bar-functionality-in-the-header-to-properly-filter-featured-products-and-today-s-deals-by-product-title-or-description-when-users-type-in-the-search-input",
+      "title": "Fix the search bar functionality in the header to properly filter featured products and today's deals by product title or description when users type in the search input",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-restore-the-today-s-deals-horizontal-row-section-that-displays-promotional-items-below-the-featured-products-section-ensuring-it-renders-when-deals-exist",
+      "title": "Restore the Today's Deals horizontal row section that displays promotional items below the featured products section, ensuring it renders when deals exist",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-product-detail-page-component-that-displays-when-clicking-on-a-product-from-search-results-or-product-cards",
+      "title": "Create a product detail page component that displays when clicking on a product from search results or product cards",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-detailed-product-information-section-below-each-product-card-display-including-specifications-features-and-extended-description",
+      "title": "Add detailed product information section below each product card display including specifications, features, and extended description",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-today-s-deals-section-to-display-product-images-and-names-in-the-same-card-format-as-featured-products-section",
+      "title": "Update Today's Deals section to display product images and names in the same card format as featured products section",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-amazon-product-reviews-section-to-each-product-detail-page-displaying-customer-ratings-review-count-and-review-excerpts",
+      "title": "Add Amazon product reviews section to each product detail page displaying customer ratings, review count, and review excerpts",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-review-and-rating-data-structures-for-the-12-new-products-in-the-productreviews-component-including-star-ratings-4-5-stars-review-counts-50-200-reviews-and-sample-review-excerpts-that-match-each-product-type-mobiles-gaming-peripherals-appliances-laptops-accessories",
+      "title": "Add review and rating data structures for the 12 new products in the ProductReviews component, including star ratings (4-5 stars), review counts (50-200 reviews), and sample review excerpts that match each product type (mobiles, gaming peripherals, appliances, laptops, accessories)",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-productcard-and-dealcard-components-to-correctly-map-and-render-product-images-for-the-12-new-products-from-the-frontend-public-assets-generated-directory-using-the-generated-image-filenames-for-samsung-galaxy-m07-samsung-galaxy-m56-iqoo-z10r-ant-esports-keyboard-mouse-combo-lg-ac-lg-tv-godrej-refrigerator-asus-tuf-a15-water-purifier-fire-tv-stick-hollyland-microphone-and-ecovacs-robot-vacuum",
+      "title": "Update the ProductCard and DealCard components to correctly map and render product images for the 12 new products from the frontend/public/assets/generated directory, using the generated image filenames for Samsung Galaxy M07, Samsung Galaxy M56, iQOO Z10R, Ant Esports keyboard/mouse combo, LG AC, LG TV, Godrej refrigerator, ASUS TUF A15, water purifier, Fire TV Stick, Hollyland microphone, and ECOVACS robot vacuum",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-debug-and-fix-the-featuredproducts-component-to-ensure-all-18-products-from-the-backend-featuredproducts-map-are-correctly-fetched-and-rendered-in-the-featured-products-grid-section-on-the-homepage",
+      "title": "Debug and fix the FeaturedProducts component to ensure all 18 products from the backend featuredProducts map are correctly fetched and rendered in the featured products grid section on the homepage",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-verify-and-fix-the-usequeries-hook-to-ensure-featuredproducts-query-correctly-returns-all-18-products-from-the-backend-actor-s-getfeaturedproducts-method",
+      "title": "Verify and fix the useQueries hook to ensure featuredProducts query correctly returns all 18 products from the backend actor's getFeaturedProducts method",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-all-product-image-paths-in-productcard-and-dealcard-components-correctly-reference-the-18-product-images-in-frontend-public-assets-generated-directory-with-proper-filename-mapping",
+      "title": "Ensure all product image paths in ProductCard and DealCard components correctly reference the 18 product images in frontend/public/assets/generated directory with proper filename mapping",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-debug-and-fix-the-featuredproducts-component-data-fetching-to-ensure-all-18-products-from-the-backend-featuredproducts-map-are-retrieved-and-rendered-in-the-featured-products-grid-section-replacing-the-current-behavior-where-only-the-original-6-products-display",
+      "title": "Debug and fix the FeaturedProducts component data fetching to ensure all 18 products from the backend featuredProducts map are retrieved and rendered in the Featured Products grid section, replacing the current behavior where only the original 6 products display",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-verify-the-usequeries-hook-s-featuredproducts-query-returns-the-complete-array-of-18-products-from-the-backend-actor-s-getfeaturedproducts-method-without-truncation-or-filtering",
+      "title": "Verify the useQueries hook's featuredProducts query returns the complete array of 18 products from the backend actor's getFeaturedProducts method without truncation or filtering",
+      "reqIds": [
+        "REQ-35"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-any-array-slicing-limiting-or-filtering-logic-in-the-featuredproducts-component-that-might-be-preventing-all-18-products-from-rendering-in-the-grid",
+      "title": "Fix any array slicing, limiting, or filtering logic in the FeaturedProducts component that might be preventing all 18 products from rendering in the grid",
+      "reqIds": [
+        "REQ-37"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Display featured affiliate products (MacBook Pro, Sony earbuds, keyboard, speaker, Dell laptop, AirPods)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add 'Today's Deals' section for promotional products",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Include product photos for all items",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Create a backend data structure to store product information including title, affiliate URL, description, category, and price for the six featured products: Apple 2025 MacBook Pro Laptop (https://amzn.to/4tGqV5X), Sony WF-1000XM5 (https://amzn.to/4kHwBsg), SOLAKAKA A75 75% Wireless Mechanical Keyboard (https://amzn.to/4kICghQ), Sony ULT Field 1 Waterproof Portable Bluetooth Speaker (https://amzn.to/4kOY4bG), Dell 14 (https://amzn.to/4tKYiV9), and Apple AirPods 4 (https://amzn.to/4cEgKsy)",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create a backend data structure and query methods for a 'Today's Deals' section that can store and retrieve promotional products separate from the main featured products",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add Techvixo logo and brand name to the website header",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Display 'Techvixo × Amazon' branding/partnership text",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Organize Today's Deals section as a horizontal row layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add a search bar to the website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add categories of products to organize and filter products",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Ensure the existing Product type in backend/main.mo includes a category field, and update all product data to have appropriate category values for proper filtering",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Make the 'Techvixo × Amazon' partnership branding text clickable and link to https://youtube.com/@techvixo_11?si=xg8gQ9jchs209IEM opening in a new tab",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Convert all product prices from USD to Indian Rupees (INR)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Make search functionality navigate to product detail page instead of filtering in place",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Add detailed product information below each product card",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Display Today's Deals with product images and names in same format as featured products",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Add Amazon product reviews to each product display",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Convert all product prices from USD to Indian Rupees (INR) in both featured products and today's deals sections",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Add 10 new today's deals products with provided Amazon affiliate links",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Add 10 new products to the Today's Deals section in the backend with the following Amazon affiliate links: https://amzn.to/4cEU8Ik, https://amzn.to/4rNofSZ, https://amzn.to/4cF4UOQ, https://amzn.to/4c14S3D, https://amzn.to/4asc1ZE, https://amzn.to/3MI2Db1, https://amzn.to/4cDedyK, https://amzn.to/4c73yw6, https://amzn.to/46EubFl, and https://amzn.to/4c0KijU",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Generate product images for the 10 new Today's Deals items to be displayed in the frontend Today's Deals section",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Add 12 new products to featured products section with Amazon affiliate links: Samsung Galaxy M07 Mobile, Samsung Galaxy M56 5G Mobile, iQOO Z10R 5G, Ant Esports Gaming Keyboard/Mouse Combo, LG AC, LG TV, Godrej Refrigerator, ASUS TUF A15, Water Purifier, Fire TV Stick, Hollyland Microphone, ECOVACS Robot Vacuum",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-29",
+      "summary": "Add 12 new products to the featuredProducts map in backend/main.mo with the following details: Samsung Galaxy M07 Mobile (https://amzn.to/40s3hwx), Samsung Galaxy M56 5G Mobile (https://amzn.to/46lDidP), iQOO Z10R 5G (https://amzn.to/4qSl8I2), Ant Esports KM1410 Wired Gaming Keyboard and Mouse Combo (https://amzn.to/4qSl8I2), LG 1.5 Ton 5 Star DUAL Inverter Split AC (https://amzn.to/46jIpeB), LG 139 cm (55 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 55UA82006LA (https://amzn.to/3ZKn7mD), Godrej 600L 3Star Frost Free Inverter Side By Side Refrigerator (https://amzn.to/3ZKn7mD), ASUS TUF A15 (https://amzn.to/46EwDM3), Native by Urban Company M2 PRO RO+UV+Copper+Alkaline 10-Stage Smart Water Purifier (https://amzn.to/46EwDM3), Amazon Fire TV Stick HD (https://amzn.to/4c29fvl), Hollyland Lark M2 Wireless Microphone (https://amzn.to/40nHiXE), and ECOVACS DEEBOT N30 Plus White 2 in 1 Robot Vacuum and mop (https://amzn.to/3ZNOGvq). Each product must include appropriate category, description, and price in INR.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-30",
+      "summary": "Ensure each of the 12 new products has an appropriate category field assigned from categories like Mobiles, Gaming Peripherals, Air Conditioners, TVs, Refrigerators, Laptops, Water Purifiers, Streaming Devices, Microphones, and Robot Vacuums to enable proper filtering in the CategoryFilter component",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-33",
+      "summary": "Ensure the backend getFeaturedProducts method correctly returns all 18 entries from the featuredProducts map including the 12 newly added products",
+      "reqIds": [
+        "REQ-36"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Tech Affiliate Hub",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

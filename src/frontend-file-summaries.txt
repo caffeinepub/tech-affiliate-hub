@@ -1,0 +1,18 @@
+{
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching featured products and today's deals from the backend canister with extensive debugging logs that trace the complete data flow from backend response through to component state, including timing metrics, array validation, and detailed error reporting.",
+  "frontend/src/components/Layout.tsx": "Main layout component with header containing Techvixo logo and integrated search bar, plus footer with caffeine.ai attribution.",
+  "frontend/src/components/ProductCard.tsx": "Clickable product card component with INR pricing, navigation to detail page, affiliate link button, complete image mapping for all 18 featured products, image error handling with fallback, lazy loading, and detailed console logging for debugging render issues.",
+  "frontend/src/components/FeaturedProducts.tsx": "Featured products section with search and category filtering, displaying filtered results in responsive grid with comprehensive debugging logs that track data flow from React Query through filtering logic to final render, including visual separators for easy log reading.",
+  "frontend/src/components/DealCard.tsx": "Enhanced clickable deal card with INR pricing, discount badges, navigation to detail page, and complete image mapping for both featured products (including all 12 new products) and all 10 Today's Deals products with their generated images.",
+  "frontend/src/components/TodaysDeals.tsx": "Today's deals section with grid layout matching featured products, displaying deals with search and category filtering.",
+  "frontend/src/App.tsx": "Main application component with React Router setup using Outlet pattern, QueryClient provider, and route configuration for home and product detail pages.",
+  "frontend/src/index.css": "Global styles with warm tech color palette (oranges, blacks, grays) using OKLCH color system for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom warm tech color tokens, Inter font family, and extended design system.",
+  "frontend/src/components/SearchBar.tsx": "Reusable search input component with search icon, clear button, and warm color theme styling matching Techvixo brand.",
+  "frontend/src/components/CategoryFilter.tsx": "Horizontal scrollable category filter component displaying clickable category buttons with visual indication of selected state.",
+  "frontend/src/pages/HomePage.tsx": "Home page component containing hero section, category filter, featured products, and today's deals with search and filter state management, enhanced with debugging logs to track product counts and filter state changes.",
+  "frontend/src/pages/ProductDetailPage.tsx": "Product detail page displaying full product information with INR pricing, product image, details section, and reviews section with back navigation.",
+  "frontend/src/components/ProductDetailsSection.tsx": "Tabbed product details component showing overview, specifications, and features sections with category-specific information and fixed Tailwind CSS classes.",
+  "frontend/src/components/ProductReviews.tsx": "Amazon-style reviews section displaying product-specific average ratings, rating distributions, and contextually relevant customer reviews with mock data for all 12 new products (Samsung mobiles, iQOO, gaming combo, LG AC/TV, Godrej fridge, ASUS laptop, water purifier, Fire TV Stick, Hollyland mic, ECOVACS vacuum) plus fallback data for other products.",
+  "frontend/src/hooks/useActor.ts": "Handles backend actor initialization with comprehensive debugging logs, error handling, retry logic, and proper query invalidation when actor changes."
+}

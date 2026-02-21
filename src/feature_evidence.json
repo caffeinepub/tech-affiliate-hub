@@ -1,0 +1,60 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-debug-and-fix-the-featuredproducts-component-data-fetching-to-ensure-all-18-products-from-the-backend-featuredproducts-map-are-retrieved-and-rendered-in-the-featured-products-grid-section-replacing-the-current-behavior-where-only-the-original-6-products-display",
+      "featureTitle": "Debug and fix the FeaturedProducts component data fetching to ensure all 18 products from the backend featuredProducts map are retrieved and rendered in the Featured Products grid section, replacing the current behavior where only the original 6 products display",
+      "files": [
+        "frontend/src/components/FeaturedProducts.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-34"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-verify-the-usequeries-hook-s-featuredproducts-query-returns-the-complete-array-of-18-products-from-the-backend-actor-s-getfeaturedproducts-method-without-truncation-or-filtering",
+      "featureTitle": "Verify the useQueries hook's featuredProducts query returns the complete array of 18 products from the backend actor's getFeaturedProducts method without truncation or filtering",
+      "files": [
+        "frontend/src/hooks/useQueries.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-35"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-fix-any-array-slicing-limiting-or-filtering-logic-in-the-featuredproducts-component-that-might-be-preventing-all-18-products-from-rendering-in-the-grid",
+      "featureTitle": "Fix any array slicing, limiting, or filtering logic in the FeaturedProducts component that might be preventing all 18 products from rendering in the grid",
+      "files": [
+        "frontend/src/components/FeaturedProducts.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-37"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
